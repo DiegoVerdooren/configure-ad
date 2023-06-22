@@ -22,33 +22,66 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1 VM creation
+- Step 2 Connectivity
+- Step 3 Installing Active Directory
+- Step 4 Setting up Active Directory
+- Step 5 Adding Users and logging into client vm
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/gbQtvZp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+The first step in this lab was to create the virtual machines, one being for the domain controller and the other for the client. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/8ei5MdB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After creating the vm for both I checked for connectivity between them by logging into one then pinging the other.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/VZ8MOVO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+I then started the process to install Active Directory. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/KFaPmSg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Once the installation was complete I went into Active Directory and created two organizational units, one for admins and the other for employees.  
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/FdCUmGh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Then, I began to create a account to be an admin inside of Active Directory.  
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/l361Bre.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+ After creating the account I needed to then join the clients vm to the domain controllers vm. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/nMuQxi4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+ To complete the lab I then used powershell to create a plethora of users. The users being created were made to fall into the employees organizational unit, and I then logged into the clients vm with one of the random accounts. 
 </p>
 <br />
